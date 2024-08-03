@@ -94,7 +94,7 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
 ```
 
-Also, if you use Nemo, to make it play nice with the terminal:
+Also, if you use Nemo as a file manager, run these commands as well to make it play nice with the terminal emulator:
 ```
 gsettings set org.cinnamon.desktop.default-applications.terminal exec sakura
 gsettings set org.cinnamon.desktop.default-applications.terminal exec-arg -x
