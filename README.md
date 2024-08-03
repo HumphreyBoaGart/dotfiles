@@ -8,8 +8,6 @@ These are my configuration files for Sway, Waybar, and some related dependencies
 
 ### Main Dependencies
 
-If you're on Debian or Arch based distros, you can find most of these in the package managers.
-
 - [sway](https://github.com/swaywm/sway)
 - [swaylock-fancy](https://github.com/Big-B/swaylock-fancy)
 - [swayidle](https://github.com/swaywm/swayidle)
