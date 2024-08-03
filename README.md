@@ -2,7 +2,7 @@
 
 ![dotfiles](https://raw.githubusercontent.com/HumphreyBoaGart/dotfiles/master/screenshot.png)
 
-These are my configuration files for Sway, Waybar, and some related dependencies in my environment.
+These are my configuration files for Sway, Waybar, and some related dependencies in my environment. I picked most of these things up back when I was still using Arch, though now it is refined for my Debian machine. I wanted a brutally efficient window manager for my old Thinkpad, and this is what I've ended up with in my quest to minimize dependencies.
 
 ## Dependencies
 
@@ -25,6 +25,8 @@ If you're on Debian or Arch based distros, you can find most of these in the pac
 - wl-clipboard
 - calcurse
 - gnome-clocks
+- process_viewer
+- btop
 
 ### Optional Dependencies
 
