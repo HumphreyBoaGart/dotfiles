@@ -1,1 +1,277 @@
+###################################################
+### Sway config                                 ###
+### Read `man 5 sway` for a complete reference. ###
+###################################################
 
+####################
+#  Basic Settings  #
+####################
+
+### Set Modifier key
+set $mod Mod4
+
+### Set Terminal
+# Set default terminal emulator to foot
+#set $term foot
+# Set default terminal emulator to sakura
+set $term sakura
+
+### Set Application Launcher
+# Use dmenu as application launcher:
+#set $menu dmenu_path | dmenu_run -nb '#111111' -sb '#5a7574' -sf '#FFFFFF' | xargs swaymsg exec --
+# Use wofi as application launcher for GUI apps and apps with .desktop files:
+set $menu wofi --show=drun --term=sakura | xargs swaymsg exec
+# Use bemenu as alternate launcher, piping output to a new terminal window for CLI apps without .desktop files:
+set $menualt bemenu-run --no-overlap --line-height "28" -i -p "＄" --ff "#EEEEEE" --tb "#344c59" --tf "#FFFFFF" --hf "#8cbed9" --no-exec | xargs -r foot
+
+#################
+# Look and Feel #
+#################
+
+### Default Workspace Layout (default|stacking|tabbed)
+workspace_layout default
+
+### Margins and Borders
+default_border pixel 6
+gaps inner 6
+smart_borders on
+smart_gaps on
+titlebar_padding 9 4
+
+### Colors
+# Teal Theme
+#client.focused #61747375 #5a7574CC #FFFFFF
+#client.unfocused #33333399 #33333399 #DDDDDD
+# Dark Theme
+#client.focused #94949494 #94949494 #FFFFFF #94949494 #94949494
+#client.unfocused #34343494 #00000094 #CCCCCC #00000094 #00000094
+# Beach Theme
+client.focused #958d9d94 #958d9d94 #FFFFFF #958d9d94 #5dcce994
+client.unfocused #34343494 #00000094 #CCCCCC #00000094 #958d9d94
+
+### Wallpaper configuration
+# (more resolutions are available in /usr/share/backgrounds/sway/)
+# Example:
+# output HDMI-A-1 resolution 1920x1080 position 1920,0
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+output * bg ~/.config/sway/augustine.jpg fill
+
+
+#######################
+# Input configuration #
+#######################
+
+# You can get the names of your inputs by running:
+#     swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information.
+
+### Trackpad config
+input "2:14:SynPS/2_Synaptics_TouchPad" {
+	#dwt enabled
+	#tap enabled
+	natural_scroll enabled
+	#middle_emulation enabled
+}
+
+
+################
+# Key bindings #
+################
+
+# Open a new terminal session
+bindsym $mod+Return exec $term
+
+# Kill focused window
+bindsym $mod+q kill
+
+# Open your launchers
+bindsym $mod+space exec $menu
+bindsym $mod+Shift+space exec $menualt
+
+# Drag floating windows by holding down $mod and left mouse
+# button. Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for
+# resizing and right mouse button for dragging.
+floating_modifier $mod normal
+
+# Move your focus around
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move the focused window with the same, but add Shift
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Switch to workspace
+bindsym $mod+1 workspace "1:term"
+bindsym $mod+2 workspace "2:files"
+bindsym $mod+3 workspace "3:web"
+bindsym $mod+4 workspace "4:aux"
+bindsym $mod+5 workspace "5:dev"
+bindsym $mod+6 workspace "6:media"
+bindsym $mod+7 workspace "7:office"
+bindsym $mod+8 workspace "8:music"
+bindsym $mod+9 workspace "9:chat"
+bindsym $mod+0 workspace "10:sys"    
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# Move focused container to workspace 
+bindsym $mod+Shift+1 move container to workspace "1:term"
+bindsym $mod+Shift+2 move container to workspace "2:files"
+bindsym $mod+Shift+3 move container to workspace "3:web"
+bindsym $mod+Shift+4 move container to workspace "4:aux"
+bindsym $mod+Shift+5 move container to workspace "5:dev"
+bindsym $mod+Shift+6 move container to workspace "6:media"
+bindsym $mod+Shift+7 move container to workspace "7:office"
+bindsym $mod+Shift+8 move container to workspace "8:music"
+bindsym $mod+Shift+9 move container to workspace "9:chat"
+bindsym $mod+Shift+0 move container to workspace "10:sys"    
+	
+# You can "split" the current object of your focus with
+# $mod+b or $mod+v, for horizontal and vertical splits
+# respectively.
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+F11 fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+d floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+d focus mode_toggle
+
+# Move focus to the parent container
+bindsym $mod+a focus parent
+
+### Scratchpad w/ Mod+minus
+# Sway has a "scratchpad", which is a bag of holding for windows.
+# You can send windows there and get them back later.
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+### Resizing containers
+mode "resize" {
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+### Volume Controls
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+### Screen Brightness Controls
+# FIX EVENTUALLY: Why is hotkey slower than $mod+Fx?
+bindsym XF86MonBrightnessUp exec brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+# workaround for debugging
+#bindsym $mod+F6 exec brightnessctl s +10%
+#bindsym $mod+F5 exec brightnessctl s 10%-
+
+### Display Key
+bindsym XF86Display exec wdisplays
+
+### Screen Capture w/ PrintScr
+# Screenshot active window
+bindsym Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - ~/Pictures/Screenshots/$(date +'ss_%s.png')
+# Screenshot active desktop
+bindsym $mod+Print exec swaymsg -t get_outputs | jq -r '.[] | select(.focused?) | .name' | grim ~/Pictures/Screenshots/$(date +'ss_%s.png')
+
+### Color Picker w/ Alt+PrintSc
+# Send hex value to clipboard
+bindsym Alt+Print exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
+# Send srbg() value to clipboard:
+bindsym Shift+Alt+Print exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 6 | wl-copy
+
+### Lock Machine w/ mod+L
+# Lock machine with swaylock-fancy
+bindsym $mod+l exec swaylock-fancy -p --text 'OBEY POSTED LIMITS'
+# stock swaylock function included here for debugging
+#bindsym $mod+l exec swaylock
+
+### Log Out
+bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to log out?' -B 'Yes, exit sway' 'swaymsg exit'
+
+### Reload the Sway configuration file
+bindsym $mod+Shift+c reload
+
+
+######################
+# Idle Configuration #
+######################
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+#exec swayidle -w \
+#	timeout 300 'swaylock -f -c 000000' \
+#	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+#	before-sleep 'swaylock -f -c 000000'
+# This will turn the screen off after 10 minutes of inactivity, then turn
+# your screens back on when resumed.
+exec swayidle -w \
+	timeout 600 'swaymsg "output * dpms off"' \
+		resume 'swaymsg "output * dpms on"'
+
+
+########################
+# Notifications Center #
+########################
+
+# Start swaync daemon
+exec swaync
+
+# Toggle control center
+bindsym $mod+n exec swaync-client -t -sw
+
+
+##############
+# Status Bar #
+##############
+
+### Include Waybar
+bar {
+	swaybar_command waybar
+}
+
+######################
+# App Specific Rules #
+######################
+
+### Floating Apps
+for_window [app_id="blueman"] floating enable
+for_window [app_id="org.gnome.Calculator"] floating enable
+for_window [app_id="org.gnome.clocks"] floating enable
+for_window [app_id="pavucontrol"] floating enable
+
+
+############
+# Includes #
+############
+
+### System-wide Sway configs
+include /etc/sway/config.d/*
