@@ -30,7 +30,7 @@ If you're on Debian or Arch based distros, you can find most of these in the pac
 
 ### Optional Dependencies
 
-These are all specific to the hardware I'm using, and you may not need them. You'll have to modify the file if you want to ditch any of these.
+These are all specific to the hardware I'm using, and you may not need them. You'll have to modify the Waybar config if you want to ditch any of these.
 
 - iwd
 - pulseaudio, pavucontrol, pamixer
