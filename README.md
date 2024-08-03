@@ -1,6 +1,6 @@
 # Sway .dotFiles
 
-[!(screenshot.png)]
+![dotfiles](https://raw.githubusercontent.com/HumphreyBoaGart/dotfiles/master/screenshot.png)
 
 These are my configuration files for Sway, Waybar, and some related dependencies in my environment.
 
