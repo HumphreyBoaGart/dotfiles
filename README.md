@@ -92,6 +92,10 @@ I use the Adwaita Dark theme across all GTK versions, as it works out of the box
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
+```
+
+Also, if you use Nemo, to make it play nice with the terminal:
+```
 gsettings set org.cinnamon.desktop.default-applications.terminal exec sakura
 gsettings set org.cinnamon.desktop.default-applications.terminal exec-arg -x
 ```
