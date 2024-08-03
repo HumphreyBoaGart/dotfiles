@@ -1,6 +1,8 @@
 # Sway & Waybar Environment .dotFiles
 
-![dotfiles](https://raw.githubusercontent.com/HumphreyBoaGart/dotfiles/master/screenshot.png)
+![main theme](https://raw.githubusercontent.com/HumphreyBoaGart/dotfiles/master/screenshot.png)
+
+![alternate theme](https://raw.githubusercontent.com/HumphreyBoaGart/dotfiles/master/screenshot-winter.png)
 
 These are my configuration files for Sway, Waybar, and some related dependencies in my environment. I picked most of these things up back when I was still using Arch, though now it is refined for my Debian machine. I wanted a brutally efficient window manager for my old Thinkpad, and this is what I've ended up with in my quest to minimize dependencies.
 
