@@ -76,7 +76,7 @@ This uses both **wofi** and **bemenu** for application launchers. `Mod+Space` op
 
 ### Wrangling GTK
 
-I use the Adwaita Dark theme across all GTK versions, as it works out of the box pretty well with the vibe I wanted on Sway, provides a consistent look, and doesn't require any extra theme utilities. I've included configs for GTK 2 & 3 apps so you don't have to generate your own. For GTK 4, you'll need to run the following commands to hammer the final bits into place:
+I use the Adwaita Dark theme across all GTK versions, as it works out of the box, matches the vibe I wanted on Sway, provides a consistent look, and doesn't require any extra theme utilities. I've included configs for GTK 2 & 3 apps so you don't have to generate your own. For GTK 4, you'll need to run the following commands to hammer the final bits into place:
 ```
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
