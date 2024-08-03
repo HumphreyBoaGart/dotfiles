@@ -58,7 +58,7 @@ If you're used to Sway already and know how to read config files, you can skip t
 
 ### Sway
 
-`.config/sway/config` is the crux of everything here. There's a lot of commented-out options I've left behind from various configurations I've run, and some of them are really useful if you need something to fall back on while debugging something else.
+`.config/sway/config` is the crux of everything here. There's a lot of commented-out options I've left behind from various configurations I've run, which I've left behind for reference sake. Some of them are really useful if you need something to fall back on while debugging something else.
 
 ### Waybar
 
@@ -67,6 +67,10 @@ There are two configurations in .config/waybar/ - `config-single` and `config-do
 `config-single` crams everything into a single bar on the bottom of the screen, and is probably the one you want.
 
 `config-double` is my (unfinished) expansion that moves notifications and the system tray to an additional top bar, and pulls in [wttrbar](https://github.com/bjesus/wttrbar) for good measure. The blank spot on the left of the top bar is for an RSS headline ticker, which is the last missing puzzle piece of this environment.
+
+### Application Launchers
+
+This uses both **wofi** and **bemenu** for application launchers. `Mod+Space` opens Wofi, which is the normal launcher. `Mod+Shift+Space` opens bemenu, which opens the selected app in a terminal window (which is very useful for working with some terminal apps, and even debugging GUI apps).
 
 ### Twin Terminals
 
