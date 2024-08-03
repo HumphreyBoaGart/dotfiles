@@ -61,7 +61,7 @@ If you're used to Sway already and know how to read config files, you can skip t
 
 ### Sway
 
-`.config/sway/config` is the crux of everything here. There's a lot of commented-out options I've left behind from various configurations I've run, which I've left behind for reference sake. Some of them are really useful if you need something to fall back on while debugging something else.
+`.config/sway/config` is the crux of everything here. There's a lot of commented-out options from various configurations I've run, which I've left behind for reference & flexibility sake.
 
 ### Waybar
 
