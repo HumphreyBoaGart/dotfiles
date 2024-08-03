@@ -48,7 +48,7 @@ These are just things called on some of the keybinds in `.config/sway/config` an
 
 - calcurse
 - gnome-clocks
-- process_viewer
+- process-viewer
 - btop
 - wdisplays
 - iwd
