@@ -1,0 +1,59 @@
+/* ::root{ */
+/*     --accent: #5291e2; */
+/*     --dark: #383C4A; */
+/*     --light: #7C818C; */
+/*     --ld: #404552; */
+/*     --dl: #4B5162 */
+/*     --white: white; */
+/* } */
+
+*{
+    font-family: monospace;
+}
+
+window {
+    border: 5px solid #7C818C;
+    background-color: transparent;
+    opacity: 0.88;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: #383C4A;
+    color: white;
+}
+
+#input:focus { border: 0; }
+
+#inner-box {
+    background-color: #383C4A;
+    color: #fff;
+}
+
+#outer-box {
+    margin: 5px;
+    padding:20px;
+    background-color: #383C4A;
+}
+
+#scroll {
+}
+
+#text {
+padding: 5px;
+color: white;
+}
+
+#entry:nth-child(even){
+    background-color: #404552;
+}
+
+#entry:selected {
+    background-color: #36525a;
+}
+
+#text:selected {
+}
