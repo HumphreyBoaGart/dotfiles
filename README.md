@@ -22,11 +22,14 @@ If you're on Debian or Arch based distros, you can find most of these in the pac
 - grim
 - jq
 - slurp
+- imagemagick
 - wl-clipboard
 - calcurse
 - gnome-clocks
 - process_viewer
 - btop
+- xdg-desktop-portal
+- xwayland (for app compatability)
 
 ### Theme Dependencies
 
@@ -35,16 +38,19 @@ If you're on Debian or Arch based distros, you can find most of these in the pac
 - [Candy Icons](https://github.com/EliverLara/candy-icons)
 - Adwaita-dark
 
-To get all the Adwaita elements WITHOUT GNOME in Debian, run:
-`sudo apt install gnome-themes-extra gnome-themes-extra-data`
+To get all the Adwaita GTK 2/3/4 and QT 5/6 elements WITHOUT THE REST OF GNOME in Debian, run:
+```
+sudo apt install gnome-themes-extra gnome-themes-extra-data adwaita-qt adwaita-qt6
+```
 
-### Optional Dependencies
+### Hardware Dependencies
 
 These are all specific to the hardware I'm using, and you may not need them. You'll have to modify the Waybar config if you want to ditch any of these.
 
 - iwd
-- pulseaudio, pavucontrol, pamixer
-- [blueman](https://github.com/blueman-project/blueman), pulseaudio-module-bluetooth
+- [blueman](https://github.com/blueman-project/blueman)
+- pulseaudio & pulseaudio-module-bluetooth
+- pavucontrol & pamixer
 
 ## Environment Notes
 
@@ -72,4 +78,11 @@ This uses both **wofi** and **bemenu** for application launchers. `Mod+Space` op
 
 ### Wrangling GTK
 
-I use the Adwaita Dark theme across all GTK versions, as it works out of the box pretty well with the vibe I wanted on Sway, and doesn't require any theme utilities to set up beyond getting Adwaita out of the repos. I've included configs for GTK 2 & 3 apps. For GTK 4, you'll need to run the following commands to hammer the last bits into place:
+I use the Adwaita Dark theme across all GTK versions, as it works out of the box pretty well with the vibe I wanted on Sway, provides a consistent look, and doesn't require any extra theme utilities. I've included configs for GTK 2 & 3 apps so you don't have to generate your own. For GTK 4, you'll need to run the following commands to hammer the final bits into place:
+```
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
+gsettings set org.cinnamon.desktop.default-applications.terminal exec sakura
+gsettings set org.cinnamon.desktop.default-applications.terminal exec-arg -x
+```
