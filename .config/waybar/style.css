@@ -1,9 +1,32 @@
+/* Global Styles */
 * {
 	border: none;
 	border-radius: 0;
 	font-size: 13px;
 	font-family: monospace;
 }
+
+
+/* Top Waybar */
+window.top#waybar {
+	background: #000000;
+	color: #fdf6e3;
+	opacity: 0.84;
+}
+#custom-weather {
+	padding: 3px 7px 5px;
+}
+#tray {
+	color: #EEEEEE;
+	padding: 1px 7px;
+}
+#custom-notification {
+	color: #EEEEEE;
+	padding: 0 12px 1px 7px;
+	font-family: "NotoSansMono Nerd Font";
+}
+
+/* Bottom Waybar */
 window.bottom#waybar {
 	background: #958d9d;
 	color: #fdf6e3;
@@ -73,13 +96,4 @@ window.bottom#waybar {
 	padding: 0 10px;
 	opacity: 0.60;
 	border-top: 1px solid transparent;
-}
-#tray {
-	color: #EEEEEE;
-	padding: 1px 7px;
-}
-#custom-notification {
-	color: #EEEEEE;
-	padding: 0 12px 1px 7px;
-	font-family: "NotoSansMono Nerd Font";
 }
