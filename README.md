@@ -8,6 +8,8 @@ These are my configuration files for Sway, Waybar, and some related dependencies
 
 ### Main Dependencies
 
+I found most of these in Debian's stock Bookworm repos. Most of these were in the Ubuntu repos as well. When I was running this on Arch a couple years ago, more of these were in the AUR. Either way, you won't have to work very hard installing all of these.
+
 - [sway](https://github.com/swaywm/sway)
 - [swaylock-fancy](https://github.com/Big-B/swaylock-fancy)
 - [swayidle](https://github.com/swaywm/swayidle)
