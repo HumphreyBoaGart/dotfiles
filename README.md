@@ -40,7 +40,7 @@ These are all specific to the hardware I'm using, and you may not need them. You
 
 ### Waybar
 
-There are two configurations in /.config/waybar/ - `config-single` and `config-double`. Just rename the one you want to use to simple `config` and leave it in the /.config/waybar/ folder.
+There are two configurations in /.config/waybar/ - `config-single` and `config-double`. Just rename the one you want to use to simply `config` and leave it in the /.config/waybar/ folder.
 
 `config-single` crams everything into a single bar on the bottom of the screen, and is probably the one you want.
 
