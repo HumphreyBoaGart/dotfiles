@@ -45,7 +45,7 @@ sudo apt install gnome-themes-extra gnome-themes-extra-data adwaita-qt adwaita-q
 
 ### Hardware Dependencies
 
-These are all specific to the hardware I'm using, and you may not need them. You'll have to modify the Waybar config if you want to ditch any of these.
+These are all specific to the hardware I'm using, and you may not need them. You'll have to modify their associated references in the Waybar config file if you want to ditch any of these.
 
 - iwd
 - [blueman](https://github.com/blueman-project/blueman)
@@ -54,7 +54,7 @@ These are all specific to the hardware I'm using, and you may not need them. You
 
 ## Environment Notes
 
-If you're used to Sway already, you can skip the rest of the README at this point. If you just got here from GNOME or KDE, you'll probably want to skim the rest of this.
+If you're used to Sway already and know how to read config files, you can skip the rest of the README at this point. If you just got here from GNOME or KDE, you'll probably want to skim the rest of this.
 
 ### Sway
 
@@ -72,9 +72,11 @@ There are two configurations in .config/waybar/ - `config-single` and `config-do
 
 Terminal exec commands I have mapped to a mixture of **sakura** and **foot**. This is just my weird preference. You can go through yourself and set everything to one terminal or the other if you only need to use one.
 
-### Application Launchers
+### Print Screen Key Functions
 
-This uses both **wofi** and **bemenu** for application launchers. `Mod+Space` opens Wofi, which is the normal launcher. `Mod+Shift+Space` opens bemenu, which opens the selected app in a terminal window (which is very useful for working with some terminal apps, and even debugging GUI apps).
+`Print` and `Mod+Print` take screenshots of the active window and the whole desktop, respectively, and save them in ~/Pictures/Screenshots/
+
+`Alt+Print` opens the color picker. You select a pixel on the screen, and it sends the hex color code straight to the clipboard. `Shift+Alt+Print` does the same thing, only it sends the rgb() value to the clipboard instead.
 
 ### Wrangling GTK
 
