@@ -40,7 +40,7 @@ I found most of these in Debian's stock Bookworm repos. Most of these were in th
 
 To get all the Adwaita GTK 2/3/4 and QT 5/6 elements WITHOUT THE REST OF GNOME in Debian, run:
 ```
-sudo apt install gnome-themes-extra gnome-themes-extra-data adwaita-qt adwaita-qt6
+sudo apt install libadwaita-1-0 gnome-themes-extra gnome-themes-extra-data adwaita-qt adwaita-qt6
 ```
 
 ### Hardware Dependencies
