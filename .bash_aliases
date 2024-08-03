@@ -16,7 +16,9 @@ PS1="\[\033[1;34m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[1
 umask 0077
 
 # Set environment variables
+export GTK_THEME=Adwaita:dark
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin"
+export QT_STYLE_OVERRIDE=Adwaita-Dark
 export TERM=foot
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CURRENT_DESKTOP=sway
