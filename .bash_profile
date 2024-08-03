@@ -7,10 +7,10 @@
 #[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Start Sway on login with no logging:
-[[ -f ~/.bashrc ]] && . ~/.bashrc && exec sway
+#[[ -f ~/.bashrc ]] && . ~/.bashrc && exec sway
 
 # Start Sway on login with error logging:
-#[[ -f ~/.bashrc ]] && . ~/.bashrc && mkdir -p /tmp/log && exec sway 2> /tmp/log/sway.log
+[[ -f ~/.bashrc ]] && . ~/.bashrc && mkdir -p /tmp/log && exec sway 2> /tmp/log/sway.log
 
 # Start Sway on login with full logging:
 #[[ -f ~/.bashrc ]] && . ~/.bashrc && mkdir -p /tmp/log && exec sway > /tmp/log/sway.log 2>&1
