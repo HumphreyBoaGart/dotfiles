@@ -1,4 +1,4 @@
-# Sway .dotFiles
+# Sway & Waybar Environment .dotFiles
 
 ![dotfiles](https://raw.githubusercontent.com/HumphreyBoaGart/dotfiles/master/screenshot.png)
 
