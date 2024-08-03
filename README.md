@@ -1,5 +1,7 @@
 # Sway .dotFiles
 
+[!(screenshot.png)]
+
 These are my configuration files for Sway, Waybar, and some related dependencies in my environment.
 
 ## Dependencies
