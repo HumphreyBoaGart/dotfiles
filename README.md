@@ -34,6 +34,14 @@ These are all specific to the hardware I'm using, and you may not need them. You
 
 ## Environment Notes
 
+### Waybar
+
+There are two configurations in /.config/waybar/ - `config-single` and `config-double`. Just rename the one you want to use to simple `config` and leave it in the /.config/waybar/ folder.
+
+`config-single` crams everything into a single bar on the bottom of the screen, and is probably the one you want.
+
+`config-double` is my (unfinished) expansion that moves notifications and the system tray to an additional top bar, and pulls in [wttrbar](https://github.com/bjesus/wttrbar) for good measure. The blank spot on the left of the top bar is for an RSS headline ticker, which is the last missing puzzle piece of this environment.
+
 ### Terminal
 
 Terminal exec commands I have mapped to a mixture of **sakura** and **foot**. This is just my weird preference. You can go through yourself and set everything to one terminal or the other if you only need to use one.
