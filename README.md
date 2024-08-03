@@ -71,6 +71,14 @@ There are two configurations in .config/waybar/ - `config-single` and `config-do
 
 `config-double` is my (unfinished) expansion that moves notifications and the system tray to an additional top bar, and pulls in [wttrbar](https://github.com/bjesus/wttrbar) for good measure. The blank spot on the left of the top bar is for an RSS headline ticker, which is the last missing puzzle piece of this environment.
 
+### Alternate Themes
+
+There is a similar dark theme in here - winter stream - for both Sway and Waybar. In the Sway config file, uncomment lines 43, 44 & 57, and comment out lines 46, 47 & 58.
+
+In the Waybar config directory is an alternate style file: `style-winter.css`. Just rename that to `style.css`.
+
+Lines 49 & 50 in the Sway config are a more neutral set of colors.
+
 ### Twin Application Launchers
 
 This uses both **wofi** and **bemenu** for application launchers. `Mod+Space` opens Wofi, which is the normal launcher. `Mod+Shift+Space` opens bemenu, which opens the selected app in a terminal window (which is very useful for working with some terminal apps, and even debugging GUI apps).
@@ -99,3 +107,9 @@ Also, if you use Nemo as a file manager, run these commands as well to make it p
 gsettings set org.cinnamon.desktop.default-applications.terminal exec sakura
 gsettings set org.cinnamon.desktop.default-applications.terminal exec-arg -x
 ```
+
+## Credits
+
+[Sean Pavone](https://www.seanpavonephoto.com) for the background photo.
+
+[Joni Rajala](https://unsplash.com/@johnnyborderland) for the winter theme background photo.
