@@ -39,15 +39,15 @@ smart_gaps on
 titlebar_padding 9 4
 
 ### Colors
-# Teal Theme
+# Winter Theme
 #client.focused #61747375 #5a7574CC #FFFFFF
 #client.unfocused #33333399 #33333399 #DDDDDD
+# Florida Theme
+client.focused #958d9d94 #958d9d94 #FFFFFF #958d9d94 #5dcce994
+client.unfocused #34343494 #00000094 #CCCCCC #00000094 #958d9d94
 # Dark Theme
 #client.focused #94949494 #94949494 #FFFFFF #94949494 #94949494
 #client.unfocused #34343494 #00000094 #CCCCCC #00000094 #00000094
-# Beach Theme
-client.focused #958d9d94 #958d9d94 #FFFFFF #958d9d94 #5dcce994
-client.unfocused #34343494 #00000094 #CCCCCC #00000094 #958d9d94
 
 ### Wallpaper configuration
 # (more resolutions are available in /usr/share/backgrounds/sway/)
