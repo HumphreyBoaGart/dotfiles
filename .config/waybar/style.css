@@ -1,0 +1,85 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-size: 13px;
+	font-family: monospace;
+}
+window.bottom#waybar {
+	background: #958d9d;
+	color: #fdf6e3;
+	opacity: 0.84;
+}
+#workspaces button {
+	background: #111;
+	padding: 2px 15px 0;
+	margin: 0 7px 0 0;
+	font-weight: bold;
+	color: #AAA;
+	border-right: none;
+	border-left: none;
+	border-top: 2px solid #999;
+	border-bottom: none;
+}
+#workspaces button.focused,
+#workspaces button.focused:hover {
+	color: #aeefff;
+	border-top: 2px solid #aeefff;
+}
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #FFF;
+	border-right: none;
+	border-left: none;
+	border-top: 2px solid #FFF;
+	border-bottom: none;
+}
+#clock {
+	color: #EEEEEE;
+	background: #000000;
+	padding: 0 14px;
+	margin-left: 12px;
+	opacity: 0.50;
+	font-weight: bold;
+	border-top: 1px solid transparent;
+}
+#network {
+	color: #3dd943;
+	padding: 0 10px 0 14px;
+	background: #111111;
+	opacity: 0.94;
+	border-top: 1px solid transparent;
+}
+#network.disconnected { color: #d73d3d; }
+#bluetooth {
+	color: #cfd4ff;
+	background: #111111;	
+	padding: 0 14px 0 10px;
+	opacity: 0.94;
+	border-top: 1px solid transparent;
+}
+#bluetooth.off,
+#bluetooth.on { color: #cfd4ff; }
+#bluetooth.disabled { color: #d73d3d; }
+#bluetooth.connected { color: #3dd943; }
+.bottom #battery { padding: 0 10px 0 14px; }
+#battery,
+#pulseaudio,
+#temperature,
+#memory,
+#cpu {
+	color: #EEEEEE;
+	background: #000000;	
+	padding: 0 10px;
+	opacity: 0.60;
+	border-top: 1px solid transparent;
+}
+#tray {
+	color: #EEEEEE;
+	padding: 1px 7px;
+}
+#custom-notification {
+	color: #EEEEEE;
+	padding: 0 12px 1px 7px;
+	font-family: "NotoSansMono Nerd Font";
+}
