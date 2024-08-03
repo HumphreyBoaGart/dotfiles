@@ -18,21 +18,18 @@ I found most of these in Debian's stock Bookworm repos. Most of these were in th
 - wofi & bemenu
 - sakura & foot
 - brightnessctl
-- wdisplays
 - grim
 - jq
 - slurp
 - imagemagick
 - wl-clipboard
-- calcurse
-- gnome-clocks
-- process_viewer
-- btop
-- xdg-desktop-portal
-- xwayland (for app compatability)
 
 ### Theme Dependencies
 
+- xdg-desktop-portal
+- xdg-desktop-portal-gtk
+- xdg-user-dirs
+- xdg-utils
 - [Red Hat Mono Font](https://github.com/RedHatOfficial/RedHatFont)
 - [Noto Emoji Font](https://github.com/googlefonts/noto-emoji)
 - [Candy Icons](https://github.com/EliverLara/candy-icons)
@@ -43,14 +40,20 @@ To get all the Adwaita GTK 2/3/4 and QT 5/6 elements WITHOUT THE REST OF GNOME i
 sudo apt install libadwaita-1-0 gnome-themes-extra gnome-themes-extra-data adwaita-qt adwaita-qt6
 ```
 
-### Hardware Dependencies
+### Other Dependencies
 
-These are all specific to the hardware I'm using, and you may not need them. You'll have to modify their associated references in the Waybar config file if you want to ditch any of these.
+These are just things called on some of the keybinds in `.config/sway/config` and `.config/waybar/config` that will not work if you do not have them. However, they are not really necessary at all to the core setup. A few of these (like iwd) are just specific to my hardware. Your mileage may vary. If you want to run this config out of the box and move on with your life, grab all of these too:
 
+- calcurse
+- gnome-clocks
+- process_viewer
+- btop
+- wdisplays
 - iwd
 - [blueman](https://github.com/blueman-project/blueman)
 - pulseaudio & pulseaudio-module-bluetooth
 - pavucontrol & pamixer
+- xwayland (for legacy app compatability)
 
 ## Environment Notes
 
