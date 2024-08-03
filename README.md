@@ -1,4 +1,4 @@
-# Sway & Waybar environment .dotfiles
+# Sway & Waybar Environment .dotfiles
 
 ![main theme](https://raw.githubusercontent.com/HumphreyBoaGart/dotfiles/master/screenshot.png)
 
