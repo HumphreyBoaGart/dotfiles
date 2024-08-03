@@ -28,6 +28,16 @@ If you're on Debian or Arch based distros, you can find most of these in the pac
 - process_viewer
 - btop
 
+### Theme Dependencies
+
+- [Red Hat Mono Font](https://github.com/RedHatOfficial/RedHatFont)
+- [Noto Emoji Font](https://github.com/googlefonts/noto-emoji)
+- [Candy Icons](https://github.com/EliverLara/candy-icons)
+- Adwaita-dark
+
+To get all the Adwaita elements WITHOUT GNOME in Debian, run:
+`sudo apt install gnome-themes-extra gnome-themes-extra-data`
+
 ### Optional Dependencies
 
 These are all specific to the hardware I'm using, and you may not need them. You'll have to modify the Waybar config if you want to ditch any of these.
@@ -38,9 +48,15 @@ These are all specific to the hardware I'm using, and you may not need them. You
 
 ## Environment Notes
 
+If you're used to Sway already, you can skip the rest of the README at this point. If you just got here from GNOME or KDE, you'll probably want to skim the rest of this.
+
+### Sway
+
+`.config/sway/config` is the crux of everything here. There's a lot of commented-out options I've left behind from various configurations I've run, and some of them are really useful if you need something to fall back on while debugging something else.
+
 ### Waybar
 
-There are two configurations in /.config/waybar/ - `config-single` and `config-double`. Just rename the one you want to use to simply `config` and leave it in the /.config/waybar/ folder.
+There are two configurations in .config/waybar/ - `config-single` and `config-double`. Just rename the one you want to use to simply `config` and leave it in the /.config/waybar/ folder.
 
 `config-single` crams everything into a single bar on the bottom of the screen, and is probably the one you want.
 
@@ -53,3 +69,7 @@ Terminal exec commands I have mapped to a mixture of **sakura** and **foot**. Th
 ### Application Launchers
 
 This uses both **wofi** and **bemenu** for application launchers. `Mod+Space` opens Wofi, which is the normal launcher. `Mod+Shift+Space` opens bemenu, which opens the selected app in a terminal window (which is very useful for working with some terminal apps, and even debugging GUI apps).
+
+### Wrangling GTK
+
+I use the Adwaita Dark theme across all GTK versions, as it works out of the box pretty well with the vibe I wanted on Sway, and doesn't require any theme utilities to set up beyond getting Adwaita out of the repos. I've included configs for GTK 2 & 3 apps. For GTK 4, you'll need to run the following commands to hammer the last bits into place:
