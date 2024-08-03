@@ -65,6 +65,8 @@ If you're used to Sway already and know how to read config files, you can skip t
 
 `.config/sway/config` is the crux of everything here. There's a lot of commented-out options from various configurations I've run, which I've left behind for reference & flexibility sake.
 
+I don't use a session manager. Linux has a perfectly good login screen built into it already. `.bash_profile` is where I stash my various preconfigured startup options, and aliases & random other variables in `.bash_aliases`. Debian and their derivatives throw all their factory userdir bash stuff in `.bashrc`, so this runs alongside that nicely without having to modify anything.
+
 ### Taskbar(s): Waybar
 
 There are two configurations in .config/waybar/ - `config-single` and `config-double`. Just rename the one you want to use to simply `config` and leave it in the /.config/waybar/ folder.
