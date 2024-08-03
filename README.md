@@ -59,11 +59,11 @@ These are just things called on some of the keybinds in `.config/sway/config` an
 
 If you're used to Sway already and know how to read config files, you can skip the rest of the README at this point. If you just got here from GNOME or KDE, you'll probably want to skim the rest of this.
 
-### Sway
+### Window Manager: Sway
 
 `.config/sway/config` is the crux of everything here. There's a lot of commented-out options from various configurations I've run, which I've left behind for reference & flexibility sake.
 
-### Waybar
+### Taskbar(s): Waybar
 
 There are two configurations in .config/waybar/ - `config-single` and `config-double`. Just rename the one you want to use to simply `config` and leave it in the /.config/waybar/ folder.
 
@@ -71,11 +71,11 @@ There are two configurations in .config/waybar/ - `config-single` and `config-do
 
 `config-double` is my (unfinished) expansion that moves notifications and the system tray to an additional top bar, and pulls in [wttrbar](https://github.com/bjesus/wttrbar) for good measure. The blank spot on the left of the top bar is for an RSS headline ticker, which is the last missing puzzle piece of this environment.
 
-### The Twin Application Launchers
+### Twin Application Launchers
 
 This uses both **wofi** and **bemenu** for application launchers. `Mod+Space` opens Wofi, which is the normal launcher. `Mod+Shift+Space` opens bemenu, which opens the selected app in a terminal window (which is very useful for working with some terminal apps, and even debugging GUI apps).
 
-### The Twin Terminal Emulators
+### Twin Terminal Emulators
 
 Terminal exec commands I have mapped to a mixture of **sakura** and **foot**. This is just my weird preference. You can go through yourself and set everything to one terminal or the other if you only need to use one.
 
