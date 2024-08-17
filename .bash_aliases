@@ -19,7 +19,6 @@ umask 0077
 export GTK_THEME=Adwaita:dark
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin"
 export QT_STYLE_OVERRIDE=Adwaita-Dark
-export TERM=foot
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CURRENT_DESKTOP=sway
 export XDG_DATA_DIRS="$HOME/.local/share/applications:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/"
