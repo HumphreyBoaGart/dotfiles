@@ -198,14 +198,16 @@ bindsym XF86Display exec wdisplays
 ### Screen Capture w/ PrintScr
 # Screenshot active window
 bindsym Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - ~/Pictures/Screenshots/$(date +'ss_%s.png')
+# Screenshot selection
+bindsym Alt+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'ss_%s.png') | wl-copy --type image/png
 # Screenshot active desktop
 bindsym $mod+Print exec swaymsg -t get_outputs | jq -r '.[] | select(.focused?) | .name' | grim ~/Pictures/Screenshots/$(date +'ss_%s.png')
 
-### Color Picker w/ Alt+PrintSc
+### Color Picker w/ Ctrl+Alt+PrintScr
 # Send hex value to clipboard
-bindsym Alt+Print exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
+bindsym Ctrl+Alt+Print exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
 # Send srbg() value to clipboard:
-bindsym Shift+Alt+Print exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 6 | wl-copy
+bindsym Shift+Ctrl+Alt+Print exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 6 | wl-copy
 
 ### Lock Machine w/ mod+L
 # Lock machine with swaylock-fancy
