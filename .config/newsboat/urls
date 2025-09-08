@@ -1,0 +1,21 @@
+# Example Categorized Newsboat URL List
+# Modify/Expand as necessary,
+
+"query:Radio:tags # \"Radio\""
+https://www.everythingrf.com/rss-feed Radio
+https://www.rtl-sdr.com/feed/ Radio
+
+"query:Tech:tags # \"Tech\""
+https://bestpoint.institute/feed.php Tech "~Anonymous Military Institute (Recent Changes)"
+https://spectrum.ieee.org/customfeeds/feed/all-topics/rss Tech "~IEEE Spectrum (All Topics)"
+https://spectrum.ieee.org/feeds/topic/computing.rss Tech "~IEEE Spectrum (Computing)"
+https://spectrum.ieee.org/feeds/topic/telecommunications.rss Tech "~IEEE Spectrum (Telecommunications)"
+https://rss.slashdot.org/Slashdot/slashdotMain Tech
+
+"query:Youtube:tags # \"Youtube\""
+https://www.youtube.com/feeds/videos.xml?channel_id=UCL4cw2w7kMcTpsqGMtzs02w Youtube internet music "~Dub Element 🌙"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAmEnaaDaIOMFVUBplnNpzg Youtube internet music "~GODSPEED 音"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_waCFCtUJpkkUxftNCbOBA Youtube internet irc "~l0de Ray Dio 🎙️"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5c8xw-NuFFfwjAtGKCjMuQ Youtube internet music "~Macroblank 📻"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4unV5BVmWubfAF0Al_AVdw Youtube geopol "~Syrian Girl 💖"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDfoyKdMfe3X4ylfqQM2TZA Youtube internet "~UAE Exotic Falconry & Finance 𓅃"
