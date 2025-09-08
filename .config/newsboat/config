@@ -1,0 +1,34 @@
+# config options:
+browser elinks
+refresh-on-startup yes
+reload-threads 100
+show-read-feeds no
+show-read-articles no
+
+# some stock themes you can load (uncomment only one):
+#include /usr/share/doc/newsboat/contrib/colorschemes/cyanism
+#include /usr/share/doc/newsboat/contrib/colorschemes/inkpot
+include /usr/share/doc/newsboat/contrib/colorschemes/kinda-maia
+#include /usr/share/doc/newsboat/contrib/colorschemes/nord
+#include /usr/share/doc/newsboat/contrib/colorschemes/plain
+#include /usr/share/doc/newsboat/contrib/colorschemes/solarized-dark
+
+# index layout ('feedlist'):
+feedlist-format "%?T?║%8T %8u %t &╠═══════════════════════════════════════════════════════════════%t?"
+feedlist-title-format "%9N - Your feeds (%u unread, %t total)"
+highlight feedlist "[║│]" color3 color0
+highlight feedlist "╠═.*" color3 color0
+
+# feed layout ('articlelist'):
+articlelist-format "%7L %8D - %t "
+articlelist-title-format "%9N - Latest by %T (%u unread, %t total)"
+
+# article layout ('itemview'):
+itemview-title-format "%9N - %F - %T"
+
+# macros:
+bind-key SPACE macro-prefix
+macro b set browser "brave %u >/dev/null 2>&1 &" ; open-in-browser ; set browser elinks
+macro f set browser "firefox %u >/dev/null 2>&1 &" ; open-in-browser ; set browser elinks
+macro p set browser "mpv %u >/dev/null 2>&1 &" ; open-in-browser ; set browser elinks
+macro d set browser "sakura -x 'yt-dlp %u' >/dev/null 2>&1 &"; open-in-browser; set browser elinks
