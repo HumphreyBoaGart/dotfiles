@@ -1,5 +1,6 @@
 # Example Categorized Newsboat URL List
-# Modify/Expand as necessary,
+# Modify/Expand as necessary (don't forget tags!!!)
+# Protip: Use "~example" to retitle unruly feeds.
 
 "query:Radio:tags # \"Radio\""
 https://www.everythingrf.com/rss-feed Radio
