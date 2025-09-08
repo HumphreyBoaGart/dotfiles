@@ -1,7 +1,7 @@
 # config options:
 browser elinks
 refresh-on-startup yes
-reload-threads 100
+reload-threads 94
 show-read-feeds no
 show-read-articles no
 
