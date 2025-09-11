@@ -26,7 +26,9 @@ articlelist-title-format "%9N - Latest by %T (%u unread, %t total)"
 # article layout ('itemview'):
 itemview-title-format "%9N - %F - %T"
 
-# macros:
+# MACROS
+# note: none of these will work unless you have
+# the associated programs in your $PATH
 bind-key SPACE macro-prefix
 macro b set browser "brave %u >/dev/null 2>&1 &" ; open-in-browser ; set browser elinks
 macro f set browser "firefox %u >/dev/null 2>&1 &" ; open-in-browser ; set browser elinks
